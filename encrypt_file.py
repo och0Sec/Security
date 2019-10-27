@@ -26,5 +26,5 @@ print("Data to be encrypted: " + str(line))
 
 #Encrypt message
 cipher = AES.new(key, AES.MODE_CFB, iv)
-msg = cipher.encrypt(line)
+msg = iv + cipher.encrypt(line)
 print('Encrypted & Base64 Encoded Secret: ' + str(base64.b64encode(msg)))
