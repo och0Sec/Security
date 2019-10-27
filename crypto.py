@@ -19,7 +19,7 @@ print("Base64 decoded key: " + str(s))
 
 #Encryption
 cipher = AES.new(key, AES.MODE_CFB, iv)
-msg = cipher.encrypt(secret)
+msg = iv + cipher.encrypt(secret)
 print('Encrypted & Base64 Encoded Secret: ' + str(base64.b64encode(msg)))
 
 #Decryption
