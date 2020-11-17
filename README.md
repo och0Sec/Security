@@ -1,5 +1,5 @@
 # Security
-Script that I have written over the last couple of years relating to information security.
+Scripts that I have written over the last couple of years relating to information security.
 # bpf.conf
 This file is for Security Onion and can be used as a template/example of how to properly filter out networkks or host that you do not wish to capture traffic on.
 # check_udp_port.py
@@ -20,3 +20,10 @@ This script utilizes the Proofpoint API which can be found here: https://help.pr
 This file is for Security Onion and can be used as a template/example of how to properly suppress/filter out noisy snort alerts found in your environment.
 # threatminer.py
 This is a CLI driven script that works on Windows, Linux and MacOS and makes API calls to https://www.threatminer.org/ which is a very useful website for Threat Intelligence.
+
+#THANK YOU
+I would like to thank you for checking out my Github and hope that you found some of these files/scripts useful.
+Thank you,
+- Oto Ricardo
+Follow me on Twitter: https://twitter.com/0xOch0
+Connect on LinkedIn: https://www.linkedin.com/in/och0/
