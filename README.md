@@ -21,9 +21,9 @@ This file is for Security Onion and can be used as a template/example of how to 
 # threatminer.py
 This is a CLI driven script that works on Windows, Linux and MacOS and makes API calls to https://www.threatminer.org/ which is a very useful website for Threat Intelligence.
 
-#THANK YOU
+# THANK YOU
 I would like to thank you for checking out my Github and hope that you found some of these files/scripts useful.
 Thank you,
-- Oto Ricardo
+Oto Ricardo
 Follow me on Twitter: https://twitter.com/0xOch0
 Connect on LinkedIn: https://www.linkedin.com/in/och0/
