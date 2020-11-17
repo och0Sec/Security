@@ -23,7 +23,9 @@ This is a CLI driven script that works on Windows, Linux and MacOS and makes API
 
 # THANK YOU
 I would like to thank you for checking out my Github and hope that you found some of these files/scripts useful.
-Thank you,\n
-Oto Ricardo\n
-Follow me on Twitter: https://twitter.com/0xOch0\n
+'''
+Thank you,
+Oto Ricardo
+Follow me on Twitter: https://twitter.com/0xOch0
 Connect on LinkedIn: https://www.linkedin.com/in/och0/
+'''
