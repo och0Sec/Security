@@ -1,2 +1,2 @@
 # Security
-For files related to inforamtion security.
+Script that I have written over the last couple of years relating to information security.
