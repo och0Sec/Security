@@ -1,5 +1,7 @@
 # Security
 Scripts that I have written over the last couple of years relating to information security.
+# strong-crypto.sh
+This script hardens a Linux server to align with STIG cryptographic standards. It applies system-wide crypto policies (FUTURE or SECLEVEL=2), enforces strong SSH algorithms (removes CBC, RC4, DSA), enables FIPS mode (optional), and configures password hashing with SHA-512. It supports RHEL and Debian-based systems, includes a test mode, creates backups, and logs changes for audit readiness.
 # bpf.conf
 This file is for Security Onion and can be used as a template/example of how to properly filter out networks or hosts that you do not wish to capture traffic on.
 # check_udp_port.py
