@@ -1,33 +1,81 @@
-# Security
-Scripts that I have written over the last couple of years relating to information security.
-# strong-crypto.sh
-This script hardens a Linux server to align with STIG cryptographic standards. It applies system-wide crypto policies (FUTURE or SECLEVEL=2), enforces strong SSH algorithms (removes CBC, RC4, DSA), enables FIPS mode (optional), and configures password hashing with SHA-512. It supports RHEL and Debian-based systems, includes a test mode, creates backups, and logs changes for audit readiness.
-# bpf.conf
-This file is for Security Onion and can be used as a template/example of how to properly filter out networks or hosts that you do not wish to capture traffic on.
-# check_udp_port.py
-This script will let you know if a UDP port on a host is opened or closed. I create this one while learning python.
-# crxposer.py
-crxposer.py is a script that you can run against your local computer or a computer on your local area network (LAN) and will return a report on risky Chrome extensions. This relies on https://crxcavator.io/ API and a free one can be requested when you create an account.
-# crypto.py 
-crypto.py is a script that makes it simple to learn and understand how encrypting or decrypting works on python.
-# encrypt_file.py
-Like the name suggests, this script encrypts input text into a file.
-# fortigate_sample_config.cfg
-From time to time, I need to configure Fortigate firewalls, and this script is a baseline for getting into the web management interface for it after a factory rest.
-# mailer.py
-mailer.py is a cript that will send an email once you configure some paramenters within it. Once those parameter have been configured, you can import the module on another script and call the function mailer.send_email("Subjecty", "Message").
-# pp-siem-all.py
-This script utilizes the Proofpoint API which can be found here: https://help.proofpoint.com/Threat_Insight_Dashboard/API_Documentation/SIEM_API. But at the time of the creation of this script I was not able to find anyone leveraging Python to make API calls to Proofpoint. This script allowed me to schedule a task to retrieve data from the portal whithout having to remember to manually go to the website (https://threatinsight.proofpoint.com/) and click refresh to check if a threat had gotten through and into a user's inbox. After deploying this, our mean time to respond to these type of events highly decreased.
-# so-threshold.conf
-This file is for Security Onion and can be used as a template/example of how to properly suppress/filter out noisy https://www.snort.org/ alerts found in your environment.
-# threatminer.py
-This is a CLI driven script that works on Windows, Linux and MacOS and makes API calls to https://www.threatminer.org/ which is a very useful website for Threat Intelligence.
+# Security Toolkit
 
-# THANK YOU
-I would like to thank you for checking out my Github and hope that you found some of these files/scripts useful.
-```
-Thank you,
-Oto Ricardo
-Follow me on Twitter: https://twitter.com/0xOch0
-Connect on LinkedIn: https://www.linkedin.com/in/och0/
-```
+Welcome to the **och0Sec Security Toolkit**—a curated collection of scripts and config templates I’ve developed over the years to streamline and harden your security workflows. From enforcing STIG-level crypto to probing UDP ports and automating threat intel pulls, you’ll find something here to help tighten your environment and learn along the way.
+
+---
+
+## 📂 Repository Contents
+
+| File / Script                   | Purpose                                                                                         |
+|---------------------------------|-------------------------------------------------------------------------------------------------|
+| **strong-crypto.sh**            | Harden a Linux host to STIG crypto standards: system-wide policies, SSH algorithm lock-down, FIPS mode, SHA-512 hashing, backups & audit logs. Supports RHEL & Debian. |
+| **bpf.conf**                    | Security Onion capture filter template—exclude unwanted networks/hosts for cleaner packet captures. |
+| **check_udp_port.py**           | Simple Python probe to check whether a UDP port on a target host is open or closed.            |
+| **crxposer.py**                 | Scan local or LAN hosts for risky Chrome extensions using the CRXcavator API.                   |
+| **crypto.py**                   | Educational Python demo: step through basic encryption/decryption operations.                   |
+| **encrypt_file.py**             | Encrypt text or files via a straightforward CLI wrapper.                                        |
+| **fortigate_sample_config.cfg** | Baseline FortiGate factory-reset template—quick web-UI access setup for management.              |
+| **mailer.py**                   | Lightweight email module: configure parameters once, then `import mailer` and call `send_email()`. |
+| **pp-siem-all.py**              | Proofpoint SIEM API client: automate threat-insight pulls and cut mean-time-to-respond.          |
+| **so-threshold.conf**           | Security Onion Snort suppression/filter template—tame noisy alerts in your environment.         |
+| **threatminer.py**              | Cross-platform CLI tool to query ThreatMiner.org for threat intelligence lookups.               |
+| **update-pip.sh**               | Handy script to upgrade your system’s Python-pip installation to the latest version.            |
+
+---
+
+## 🚀 Quick Start
+
+1. **Clone this repo**  
+   ```bash
+   git clone https://github.com/och0Sec/Security.git
+   cd Security
+
+2. **Make scripts executable**
+
+   ```bash
+   chmod +x *.sh
+
+3. **Install Python dependencies**
+
+   ```bash
+   sudo apt update && sudo apt install python3-pip
+   pip3 install requests
+
+4. **Run a script**
+
+   * **Harden crypto**:
+
+     ```bash
+     sudo ./strong-crypto.sh --test
+
+   * **Check UDP port**:
+
+     ```bash
+     python3 check_udp_port.py --host 10.0.0.5 --port 514
+
+   * **Pull Proofpoint SIEM**:
+
+     ```bash
+     python3 pp-siem-all.py --api-key YOUR_KEY --output reports/
+
+---
+
+## 🤝 Contributing
+
+Love a script? Found a bug? Want a new feature?
+
+1. Fork the repo
+2. Create a branch (`git checkout -b feature/my-update`)
+3. Commit (`git commit -m "Add feature X"`)
+4. Push (`git push origin feature/my-update`)
+5. Open a Pull Request
+
+---
+
+## 🙏 Thank You
+
+Thanks for exploring the **och0Sec Security Toolkit**! I hope you find these tools useful—feel free to raise issues, suggest improvements, or just connect.
+
+**– Oto Ricardo**
+[Twitter](https://twitter.com/0xOch0) • [LinkedIn](https://www.linkedin.com/in/och0/)
+
